@@ -1,0 +1,4 @@
+Git: ajtcl branch: '(no branch)' tag: 'v14.06a-rc1' (+0 changes) commit ref: 5230b5eed502e33e533274daacea53601877233f
+Git: alljoyn branch: '(no branch)' tag: 'v14.06a-rc1' (+0 changes) commit ref: 9d096987205609053a9a656ebd72972ea92eff17
+Git: base branch: '(no branch)' tag: 'v14.06a-rc1' (+0 changes) commit ref: 4998792e980b91967af5c1524748408abed304e4
+Git: base_tcl branch: '(no branch)' tag: 'v14.06a-rc1' (+0 changes) commit ref: 114e6b7510fd6e63ce590a43e7c27f17a1c249c1

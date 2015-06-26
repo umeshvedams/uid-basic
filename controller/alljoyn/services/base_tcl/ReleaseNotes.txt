@@ -1,0 +1,81 @@
+
+AllJoyn Thin client library for Services Version 14.06 Release Notes
+--------------------------------------------------------
+
+Platform Support
+----------------
+ 1) Linux Ubuntu (64 bit x86)
+ 
+
+Features added in Version 14.06
+-------------------------------
+
+DeviceName is now multilingual
+Adopt new bus objects registration method AJ_RegisterObjectList()
+Sample applications restructure
+Revised core introspection code
+Added  Notifications With Actions to ACServerSample
+Added Events & Actions sample to ACServerSample
+Added new behaviour configurability to Notification Service Producer sample in ServerSample
+Align with new security mechanism
+
+
+Issues Addressed in Version 14.06
+--------------------------------
+
+ASABASE-41 - Device name should support multi languages
+ASABASE-42 - Updating the deviceID should throw error
+ASABASE-43 - Updating the default Language to empty should throw an exception
+ASABASE-44 - Updating configuration to un Unsupported field should throw org.alljoyn.Error.InvalidValue Exception
+ASABASE-45 - TCL marshal/unmarshal shortcuts
+ASABASE-46 - Updating configuration to un Unsupported field should throw org.alljoyn.Error.InvalidValue Exception 
+ASABASE-47 - TCL marshal/unmarshal shortcuts
+ASABASE-50 - SetConfig should fail on fields that do not support language and request comes with a language
+ASABASE-65 - move OnboardingReadInfo and OnboardingWriteInfo from the app to the services
+ASABASE-73 - Add notification + actions to ac sample app
+ASABASE-77 - TCL marshal/unmarshal shortcuts
+ASABASE-89 - It is posible to define the soft ap password with only one character (The minimum is 8)
+ASABASE-90 - Pointers are being initialize to 0 instead of NULL
+ASABASE-120 - config service should throw exception when changing to empty device Name
+ASABASE-121 - Updating the default Language to empty should throw an exception
+ASABASE-128 - Add configuration parameter to OnboardingManager to control whether AJ_ResetWiFi() is called as part of AJOBS_ControllerAPI_GotoIdleWiFi() 
+ASABASE-133 - Make explicit calls to AJOBS_ControllerAPI_DoScanInfo() rather than inside AJOBS_ControllerAPI_GotoIdleWiFi()
+ASABASE-134 - Align with changes made to aj_introspect.c where wildcard object path '*' was replaced with '!'
+ASABASE-136 - Make the provisioning of the supported languages list a NULL terminated list
+ASABASE-137 - remove bus password authentication from sample apps
+ASABASE-139 - Dismiss method request message handling does not send a reply message
+ASABASE-151 - TTL from C binding Producer at ServerSample sample app is sent in wrong units to router node 
+ASABASE-180 - Onboarding service sample does not clear onboarding configuration when receiving FactoryReset 
+ASABASE-188 - ControlPanel Date and Time widgets do now work in thinclient
+ASABASE-190 - Add the '&' prefix to the declaration of Notification Service sessionless signals 
+ASABASE-197 - Consumer for Ubuntu does not display Notifications 
+ASABASE-202 - Error: "AJ_Authenticate status=AJ_ERR_TIMEOUT" is encountered while connecting to AJ Routing Node Bus 
+ASABASE-213 - define for interval at C notification Producer @ Server Sample is not working
+
+ASACORE-173 - About bus objects are not announced
+ASACORE-436 - Sessionless signal is marshaled with member name containing '&' prefix
+ASACORE-477 - Add the '&' prefix to the declaration of the Announce sessionless signal
+ASACORE-545 - Sessionless signal is unmarshaled with member name containing '&' prefix
+
+
+Known Issues
+------------
+ASABASE-249 - Can not onboard when the Wifi credentials are set to type WEP with security ASCII and the client uses ANY
+
+
+Compatibility
+-------------
+Thin client app built with 14.06 library will not connect to AllJoyn Routing Node from version 14.02
+CPS - generated code needs to be regenerated.
+CPS - getter function for a property needs now to add the pointer to the widget for example getCurrentTemperatureString() is now getCurrentTemperatureString(PropertyWidget* thisWidget);
+notification - function change: proxyObjects was removed from AJ_Status AJNS_Consumer_Start
+onboarding - function change: readInfo and writeInfo were removed from AJ_Status AJOBS_Start
+helper functions in services handlers were modified
+
+
+Change history
+--------------
+
+14.06 - bug fixes, code improvements, added events and actions, new security mechanism,  and minor features
+
+14.02 - 1st AllSeen Alliance release

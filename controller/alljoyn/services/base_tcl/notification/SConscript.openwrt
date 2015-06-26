@@ -1,0 +1,22 @@
+import os
+
+Import('env')
+
+env.Append(CPPPATH = [ Dir('inc') ])
+
+env.Append(CPPDEFINES = ['NOTIFICATION_SERVICE_PRODUCER'])
+
+srcs = [
+    env.Glob("src/NotificationCommon/*.c"),
+    env.Glob("src/NotificationProducer/*.c")
+    ]
+
+objs = env.Object(srcs)
+if env['build_shared']:
+    shobjs = env.SharedObject(srcs)
+else:
+    shobjs = []
+
+env['static_objs'].extend(objs)
+env['shared_objs'].extend(shobjs)
+

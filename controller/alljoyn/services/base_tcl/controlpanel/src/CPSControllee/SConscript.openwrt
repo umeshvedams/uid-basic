@@ -1,0 +1,15 @@
+Import('env')
+
+srcs = [
+    Glob('*.c'),
+    Glob('Widgets/*.c'),
+    Glob('Common/*.c'),
+]
+
+objs = env.Object(srcs)
+if env['build_shared']:
+    shobjs = env.SharedObject(srcs)
+else:
+    shobjs = []
+
+Return('objs', 'shobjs')

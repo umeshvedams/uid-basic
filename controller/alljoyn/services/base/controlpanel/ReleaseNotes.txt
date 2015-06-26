@@ -1,0 +1,41 @@
+
+AllJoyn Control Panel Service Version 14.06 Release Notes
+--------------------------------------------------------
+
+Platform Support
+----------------
+
+ 1) Linux Ubuntu (64 bit x86)
+ 2) Android Gingerbread 2.3.4 (ARM7)
+ 3) Android Ice Cream Sandwich 4.0 (ARM7)
+ 4) Android JellyBean 4.1 (ARM7)
+ 5) Android KitKat 4.4 (ARM7)
+ 6) iOS 7 and 7.1
+ 7) OpenWRT 
+
+Features added in Version 14.06
+-------------------------------
+
+
+Issues Addressed in Version 14.06
+---------------------------------
+
+ASABASE-176 - CPS Java crashes after changing language. 
+ASABASE-185 - ios control panel fails on signal after returning to the announcement view 
+ASABASE-211 - Contained widgets in the control panel do not get signals 
+ASABASE-214 - ControlPanelService - fix build warnings 
+
+
+Known Issues
+------------
+
+Compatibility
+-------------
+
+
+Change history
+--------------
+
+14.06 - 2nd AllSeen Alliance release
+
+14.02 - 1st AllSeen Alliance release

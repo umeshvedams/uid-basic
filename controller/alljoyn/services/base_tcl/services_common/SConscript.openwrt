@@ -1,0 +1,10 @@
+import os
+
+Import('env')
+
+env.Append(CPPPATH = [ Dir('inc') ])
+
+objs, shobjs = SConscript('src/SConscript.openwrt')
+
+env['static_objs'].extend(objs)
+env['shared_objs'].extend(shobjs)

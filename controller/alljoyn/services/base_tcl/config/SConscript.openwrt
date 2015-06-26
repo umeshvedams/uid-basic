@@ -1,0 +1,12 @@
+import os
+
+Import('env')
+
+env.Append(CPPDEFINES = 'CONFIG_SERVICE')
+env.Append(CPPPATH = [ Dir('inc') ])
+
+objs, shobjs = SConscript('src/SConscript.openwrt', variant_dir = 'obj', duplicate = 0)
+
+env['static_objs'].extend(objs)
+env['shared_objs'].extend(shobjs)
+
